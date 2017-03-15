@@ -59,5 +59,9 @@ A string literal can be used in two slightly different ways:
 1. As the initializer for an array of char. It specifies the initial values of the characters in that array.
 2. Anywhere else, it turns into an unnamed, static array of characters, and this unnamed array may be stored in read-only memory, and which therefore cannot necessarily be modified. 
 In an expression context, the array is converted at one to a pointer. So char* p = "string literal" initilizes p to point to the unnamed array's first element.
+
+Just to illustrate again:
+char message[] = "hello";       // message is a char array
+char* pmessage = "hello";        // pmessage is a pointer
 */
 
