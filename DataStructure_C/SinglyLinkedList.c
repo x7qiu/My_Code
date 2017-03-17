@@ -176,6 +176,10 @@ int main(){
     head = BuildAtTail();
     printLL(head);          // 1,2,3,4,5
     deleteLL(head);
+
+    head = BuildWithDummy();
+    printLL(head);
+    deleteLL(head);
     
 /*
     InsertInLinkedList(&head,9, 4); 
