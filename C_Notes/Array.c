@@ -40,7 +40,10 @@ int my_strlen(char* s){
 // 2)
 // As mentioned, since array name decays to a pointer when passed to a function, there are two implications.
 // First, the length information is lost, since sizeof(arrayname) will only return size of a pointer.
+// (the same applys to the returned pointer/array of a malloc())
+
 // Second, you can modify indivisual element of the array, since you have access to the address.
+
 
 // copy t to s;
 void my_strcpy(char* s, char* t){
