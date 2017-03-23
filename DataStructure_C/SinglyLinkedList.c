@@ -51,7 +51,7 @@ void ChangeToNull(struct node** headRef){
 
 // add at the front, and update where HEAD points to
 // need to call another function to free memory
-void push(struct node** headRef, int data){
+void Push(struct node** headRef, int data){
     struct node* newNode = malloc(sizeof(struct node));
     newNode->data = data;
     newNode->next = *headRef;
@@ -59,7 +59,6 @@ void push(struct node** headRef, int data){
 }
 
 // Several Ways to build a LL from scrath(in heap), and return the head pointer of it.
-
 // 1) build a LL by adding at the front repeatedly using push() 
 // the following example gives back (6,5,4,3,2,1)
 struct node* BuildAtHead(){
@@ -67,7 +66,7 @@ struct node* BuildAtHead(){
     int i;
     
     for (i=1; i<6; i++){
-        push(&head, i);
+        Push(&head, i);
     }
 
     return head;  // here returning a pointer is OK because memory is managed on *heap* by push 
@@ -81,11 +80,11 @@ struct node* BuildAtTail(){
     int i;
 
     // the first node must be added at the head
-    push(&head, 1);
+    Push(&head, 1);
     tail = head;
     // all other nodes can be added at the tail
     for (i=2; i<6; i++){
-        push(&(tail->next), i);
+        Push(&(tail->next), i);
         tail = tail->next;
     }
     return head;
@@ -98,10 +97,56 @@ struct node* BuildWithDummy(){
 
     dummy.next = NULL;
     for (i=1; i<6; i++){
-        push(&(tail->next), i);
+        Push(&(tail->next), i);
         tail = tail->next;
     }
     return dummy.next;
+}
+
+// 4) 
+struct node* BuildWithLocalRef(){
+    struct node* head = NULL;
+    struct node** lastPtrRef = &head;
+    int i;
+
+    for (i=1; i<6; i++){
+        Push(lastPtrRef, i);
+        lastPtrRef = &((*lastPtrRef)->next);
+    }
+    return head;
+}
+
+// Append a node at the end
+struct node* AppendNode(struct node** headRef,int num){
+    struct node* current = *headRef;
+    struct node* newNode = malloc(sizeof(struct node));
+    newNode->data = num;
+    newNode->next = NULL;
+
+    if (current == NULL){
+        *headRef = newNode;
+    }
+    else{
+        while (current->next != NULL){
+            current = current->next;
+        }
+        current->next = NewNode;
+    }
+}
+
+// Another way to append, using Push()
+struct node* AppendWithPush(struct node** headRef, int num){
+    struct node* current = *headRef;
+
+    if (current == NULL){
+        Push(headRef, num);
+    }
+    else{
+        while (current->next != NULL){
+            current = current->next;
+        }
+        Push(&(current->next), num);
+    }
 }
 
 
@@ -110,13 +155,12 @@ void InsertInLinkedList(struct node** head, int data, int position){
     struct node* current;
     struct node* prev;
     struct node* newNode = malloc(sizeof(struct node));
-    
     if (!newNode){
         puts("Memory Error");
         return ;
     }
-
     newNode->data = data;
+
     current = *head;
     if (position == 1){
         newNode->next = current;
@@ -178,6 +222,10 @@ int main(){
     deleteLL(head);
 
     head = BuildWithDummy();
+    printLL(head);
+    deleteLL(head);
+
+    head = BuildWithLocalRef();
     printLL(head);
     deleteLL(head);
     
