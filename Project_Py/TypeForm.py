@@ -1,14 +1,13 @@
 import requests
 import unicodecsv
 import time
-import pprint 
+import pprint   # for print testing
 
 API_KEY = 'ac83034cfa742c0f79c26e9a612b4ba7e2aa0d3d'
 #API_KEY = '12f95bdf19455242579ccc0c0a3402448fb441d8'
 
 # To Do List
-# 1) multiple choice handling
-# 2) error handling
+# 1) error handling
 
 
 class TypeForm(object):
@@ -28,8 +27,8 @@ class TypeForm(object):
     def fetch(self):
         self.getforms()
 
-        qids = {}   # {qid1 : ans1, qid2 : ans2, ...}
-        table = {}  # {q1 : ans1, q2 : ans2, ...}
+        qids = {}   # (id, [answer]) pairs:           {qid1 : ans1, qid2 : ans2, ...}
+        table = {}  # (question, [answer]) pairs:     {q1 : ans1, q2 : ans2, ...}
 
         for uid in self.uids:
             # Send HTTP requests to each form
@@ -54,16 +53,21 @@ class TypeForm(object):
                 qid = question_info['id']
                 question = question_info['question']
 
-                if qid in qids:
-                    table[question] = qids[qid]
+                # handle multiple choice. i.e. same question with different qids
+                if question in table:
+                    if qid in qids:                 # same q, different qid
+                        table[question].extend(qids[qid])
+                    else:
+                        pass
                 else:
-                    table[question] = ['NaN']
-            
+                    if qid in qids:
+                        table[question] = qids[qid]
+                    else:
+                        table[question] = ['NaN']
             # pause to avoid API access limit
             time.sleep(5)
             
 
-        #pprint.pprint(table)        
         with open('data.csv', 'wb') as outfile:
             writer = unicodecsv.writer(outfile)
             for key, value in table.items():
