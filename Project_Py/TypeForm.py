@@ -3,8 +3,8 @@ import unicodecsv   # To handle unicode in some of the questions and answers
 import time         # Use time.sleep() to stay under access limit 
 import sys
 
-API_KEY = 'ac83034cfa742c0f79c26e9a612b4ba7e2aa0d3d'
-#API_KEY = '12f95bdf19455242579ccc0c0a3402448fb441d8'       # my account & test API
+#API_KEY = 'ac83034cfa742c0f79c26e9a612b4ba7e2aa0d3d'
+API_KEY = '12f95bdf19455242579ccc0c0a3402448fb441d8'       # my account & test API
 
 
 class TypeForm(object):

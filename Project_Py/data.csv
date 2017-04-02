@@ -1,11 +1,35 @@
-"This is a date field. Say ""Hello, date field!"" So, what date is today?","2017-03-17,2016-12-31,1921-04-01,2007-01-01,2015-02-16,2017-03-23,2017-03-23,2017-03-23,2017-03-23"
-We went rogue and added the checkmark field! Is Keboola the best company in the known universe to work for?,"1,1,1,1,1,1,1"
-The dirtiest data field of all data fields. The address field. The true nightmare of every data analyst!,"210 - 1461 Johnston Rd, White Rock, BC V4B 3Z4,15230 Russell Ave White Rock BC V4B,Krizikova 488/115, 186 00 Praha 8-Karlin, Czechia,30 Cecil St, #19-06 Singapore 049712,WeWork 9 Devonshire Square, London EC2M 4YD, United Kingdom,1150 Davie St, Vancouver, BC V6E 1N1,123 Evergreen Terrace
-Springfield, IL 12345,Left the multi-choice blank, just because,123 Evergreen Terrace
-Springfield, IL 12345,All work and no play makes jack a dull boy.
-All work and no play makes jack a dull boy.
-All work and no play makes jack a dull boy.
-All work and no play makes jack a dull boy.
-All work and no play makes jack a dull boy."
-Now is time for the multi-choice question! What is your favorite kind of Pho?,"I love all kinds of Pho. Pho for the president!,More ingredients, the better. I like my Pho full of taste. ,I don't eat Pho but I'll start immediately! So sorry, so Pho!,Beef and basic is my choice of Pho.,I love all kinds of Pho. Pho for the president!,Beef and basic is my choice of Pho.,Beef and basic is my choice of Pho.,I don't eat Pho but I'll start immediately! So sorry, so Pho!"
-This is a number field. It contains numbers. What is your favorite prime number? #GeekAllert,"3,7,13,10,17,101,7,1,7,73"
+Thanks for your interest in joining.<br /><br />What's your <strong>first name</strong>?,Xie
+"If you owned a Sun Seat, how likely do you think you would you be to recommend it to a friend or colleague?","5,10"
+How would you rate your reaction to the new Origama® Sun Seat?,"3,5"
+What is your age range?,"25 - 34,35 - 44"
+And what's your <strong>postal address</strong>?,V3S 0H1
+"What's the best email address for you, {{answer_46714473}}?",qiux0518@hotmail.com
+What do you most and least like about the Sun Seat? What feelings and thoughts come to mind?,nothing
+At what USD price would you begin to think the Sun Seat to be <strong>so expensive</strong> that you would not consider buying it?,"70,200"
+What's your message about?,I'd just like to chat
+Had you heard of Origama® before today?,"No,Yes"
+What is your gender?,"Male,Female"
+"What's your<strong> last name</strong>,<strong> </strong>{{answer_46802298}}?",Qiu
+"If Origama® were a person, which of the following adjectives do you feel would best describe their personality?","Down-to-earth,Down-to-earth,Cheerful,Daring,Spirited,Intelligent"
+What is your yearly income?,"I prefer not to answer,$75,000 - $99,999"
+Which of the following would influence your decision the most if you were to buy a Sun Seat?,"Price,Brand"
+At what USD price would you begin to think the Sun Seat to be <strong>so cheap</strong> that you would be suspicious of its quality and not consider buying it?,"20,80"
+At what USD price would you begin to think the Sun Seat to be a <strong>bargain</strong> and a great buy for the money?,"50,90"
+How would you rate your <strong>knowledge of astronomy</strong>?,2
+"What beachwear brands, if any, can you think of?","KFC,mcdonald"
+"If you're interested in the Sun Seat, <strong>enter your email address</strong> and we'll let you know when it makes it to market.",NaN
+"Our <strong>membership fee</strong> is €40 per year, payable after your first meeting. We'll discuss what this includes when we see you.",NaN
+About You,NaN
+Your <strong>telephone number</strong>?,5198076823
+"What's your first name, stranger?",Xie
+How do you feel the Sun Seat would be priced against competitors?,"3,4"
+"<strong>Sit back, relax and think of the beach...</strong>",NaN
+"At what USD price would you begin to think the Sun Seat is <strong>getting expensive</strong>, but still not out of the question?","65,100"
+What is your current employment status?,"Student,Retired"
+Do you own <strong>your own telescope</strong>?,No
+And<strong> occupation</strong>?,Student
+What is the highest level of education you have completed?,"Undergraduate Degree,I prefer not to answer"
+In which country were you born?,"China,Canada"
+How often do you use beachwear products?,"2,6"
+And what's your <strong>main area of interest</strong>?,Math
+What's your message?,Hi hows it going?
